@@ -36,3 +36,5 @@ def index():
     return render_template('index.html', template_form=input, template_list=strn)
 
 
+if __name__=="__main__":
+   app.run(debug=True)
