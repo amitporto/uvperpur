@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+   <header class="heading">
+     <h1>Percentage of purity (UV spectrophotometry)</h1>
+   </header>
+   <body>
+    <div class="bod">
+     <h2>Description:</h2>
+     <p>This app claculates the % of purity of drugs with folllowing inputs</p>
+    </div>
+     <form method="POST">
+      {{ template_form.hidden_tag() }}
+      <p>
+        {{ template_form.totWt.label }}
+        {{ template_form.totWt() }}
+      </p>
+      <p>
+        {{ template_form.ns.label }}
+        {{ template_form.ns() }}
+      </p>
+      <p>
+        {{ template_form.abs.label }}
+        {{ template_form.abs() }}
+      </p>
+      <p>
+        {{ template_form.spa.label }}
+        {{ template_form.spa() }}
+      </p>
+      <p>
+        {{ template_form.wtTak.label }}
+        {{ template_form.wtTak() }}
+      </p>
+      <p>
+        {{ template_form.dilFac.label }}
+        {{ template_form.dilFac() }}
+      </p>
+      <p>
+        {{ template_form.ori.label }}
+        {{ template_form.ori() }}
+      </p>
+      <p>{{ template_form.submit() }}</p>
+     </form>
+     <h2>Result:</h2>
+     <p>% of purity: {{ '%0.2f'|format(template_list|float) }}</p>
+
+   </body>
+
+{% endblock %}
