@@ -8,13 +8,13 @@ app.config["SECRET_KEY"] = "mysecret"
 st=''
 
 class inputform(FlaskForm):
-      totWt=StringField("Total Weight of samples")
+      totWt=StringField("Total Weight of samples (in g)")
       ns=StringField("Number of samples")
       abs=StringField("Absorbance")
       spa=StringField("Specific absorbance")
-      wtTak=StringField("Weight taken")
+      wtTak=StringField("Weight taken (in g)")
       dilFac=StringField("Dilution factor")
-      ori=StringField("Label claim")
+      ori=StringField("Label claim (in g)")
       submit=SubmitField("Submit")
 
 
